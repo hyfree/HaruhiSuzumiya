@@ -12,6 +12,7 @@ namespace Xaminals
 {
     public partial class AppShell : Shell
     {
+        public ICommand NavigateCommand { get; private set; }
         Random rand = new Random();
         Dictionary<string, Type> routes = new Dictionary<string, Type>();
         public Dictionary<string, Type> Routes { get { return routes; } }
@@ -23,6 +24,12 @@ namespace Xaminals
         {
             InitializeComponent();
             RegisterRoutes();
+            NavigateCommand = new Command<Type>(
+               async (Type pageType) =>
+               {
+                   Page page = (Page)Activator.CreateInstance(pageType);
+                   await Navigation.PushAsync(page);
+               });
             BindingContext = this;
         }
 

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--FlyoutBackgroundImage="photo.png"-->
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:controls="clr-namespace:Xaminals.Controls"
        xmlns:views="clr-namespace:Xaminals.Views"
-       FlyoutBackgroundImage="photo.jpg"
-       FlyoutBackgroundImageAspect="AspectFill"
+       
        FlyoutHeaderBehavior="CollapseOnScroll"
        Navigating="OnNavigating"
        Navigated="OnNavigated"
@@ -31,25 +31,25 @@
             <Setter Property="Shell.BackgroundColor"
                     Value="#039BE6" />
         </Style>
-        <Style x:Key="MonkeysShell"
+        <Style x:Key="PinkShell"
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
-                    Value="#689F39" />
+                    Value="#FFC0CB" />
         </Style>
-        <Style x:Key="ElephantsShell"
+        <Style x:Key="RedShell"
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
                     Value="#ED3B3B" />
         </Style>
-        <Style x:Key="BearsShell"
+        <Style x:Key="BlueShell"
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
                     Value="#546DFE" />
         </Style>
-        <Style x:Key="AboutShell"
+        <Style x:Key="PalegreenShell"
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
@@ -120,17 +120,37 @@
     <FlyoutItem Route="animals"
                 Title="Animals"
                 FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="Domestic"
+        <Tab Title="主页"
              Route="domestic"
-             Icon="paw.png">
+             Icon="home.png">
+            <ShellContent Route="推荐"
+                          Style="{StaticResource DomesticShell}"
+                          Title="推荐"
+                          Icon="home.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
             <ShellContent Route="cats"
                           Style="{StaticResource DomesticShell}"
-                          Title="Cats"
-                          Icon="cat.png"
+                          Title="时间线"
+                          Icon="dog.png"
                           ContentTemplate="{DataTemplate views:CatsPage}" />
-            <ShellContent Route="dogs"
+            <ShellContent Route="追番"
                           Style="{StaticResource DomesticShell}"
-                          Title="Dogs"
+                          Title="追番"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+            <ShellContent Route="漫画"
+                          Style="{StaticResource DomesticShell}"
+                          Title="漫画"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+            <ShellContent Route="图片"
+                          Style="{StaticResource DomesticShell}"
+                          Title="图片"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+            <ShellContent Route="施工现场"
+                          Style="{StaticResource DomesticShell}"
+                          Title="施工现场"
                           Icon="dog.png"
                           ContentTemplate="{DataTemplate views:DogsPage}" />
         </Tab>
@@ -147,24 +167,29 @@
                
         -->
         <ShellContent Route="monkeys"
-                      Style="{StaticResource MonkeysShell}"
-                      Title="Monkeys"
-                      Icon="monkey.png"
+                      Style="{StaticResource PinkShell}"
+                      Title="分类"
+                      Icon="volume.png"
                       ContentTemplate="{DataTemplate views:MonkeysPage}" />
         <ShellContent Route="elephants"
-                      Style="{StaticResource ElephantsShell}"
-                      Title="Elephants"
-                      Icon="elephant.png"
+                      Style="{StaticResource BlueShell}"
+                      Title="动态"
+                      Icon="atm.png"
+                      ContentTemplate="{DataTemplate views:ElephantsPage}" />
+        <ShellContent Route="elephants"
+                      Style="{StaticResource PalegreenShell}"
+                      Title="收藏"
+                      Icon="like.png"
                       ContentTemplate="{DataTemplate views:ElephantsPage}" />
         <ShellContent Route="bears"
-                      Style="{StaticResource BearsShell}"
-                      Title="Bears"
-                      Icon="bear.png"
+                      Style="{StaticResource BlueShell}"
+                      Title="我的"
+                      Icon="user.png"
                       ContentTemplate="{DataTemplate views:BearsPage}" />
     </FlyoutItem>
 
     <ShellContent Route="about"
-                  Style="{StaticResource AboutShell}"
+                  Style="{StaticResource PalegreenShell}"
                   Title="About"
                   Icon="info.png"
                   ContentTemplate="{DataTemplate views:AboutPage}" />

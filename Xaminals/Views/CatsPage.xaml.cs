@@ -19,5 +19,6 @@ namespace Xaminals.Views
             // The full route is shown below.
             // await Shell.Current.GoToAsync($"//animals/domestic/cats/catdetails?name={catName}");
         }
+  
     }
 }

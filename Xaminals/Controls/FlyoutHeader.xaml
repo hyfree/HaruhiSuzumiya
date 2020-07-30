@@ -5,8 +5,8 @@
              HeightRequest="200">
     <Grid BackgroundColor="Black">
         <Image Aspect="AspectFill" 
-               Source="xamarinstore.jpg" 
-               Opacity="0.6" />
+               Source="header.jpg" 
+               Opacity="0.6"/>
         <Label Text="Animals" 
                TextColor="White" 
                FontAttributes="Bold" 

@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:Xaminals.Controls"
              xmlns:data="clr-namespace:Xaminals.Data"
              xmlns:views="clr-namespace:Xaminals.Views"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:viewmodels="clr-namespace:CarouselViewDemos.ViewModels"
              x:Class="Xaminals.Views.DogsPage"
+             BackgroundColor="AliceBlue"
              Title="Dogs">
+    <ContentPage.BindingContext>
+        <viewmodels:MonkeysViewModel />
+        
+    </ContentPage.BindingContext>
     <ContentPage.Resources>
-        <Style TargetType="Grid">
+        <!--<Style TargetType="Grid">
             <Setter Property="VisualStateManager.VisualStateGroups">
                 <VisualStateGroupList>
                     <VisualStateGroup x:Name="CommonStates">
                         <VisualState x:Name="Normal" />
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" 
+                                <Setter Property="BackgroundColor"
                                         Value="#039BE6" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
                 </VisualStateGroupList>
             </Setter>
-        </Style>
+        </Style>-->
     </ContentPage.Resources>
- 
+
     <Shell.SearchHandler>
         <controls:AnimalSearchHandler Placeholder="Enter search term"
                                       ShowsResults="true"
@@ -31,10 +38,79 @@
                                       Animals="{x:Static data:DogData.Dogs}"
                                       SelectedItemNavigationTarget="{x:Type views:DogDetailPage}" />
     </Shell.SearchHandler>
-    
-    <CollectionView Margin="20"
+    <ScrollView>
+        <Grid  BackgroundColor="AliceBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="1*" />
+
+            </Grid.RowDefinitions>
+
+            <CarouselView x:Name="carouselView"
+                          HeightRequest="200"
+                          BackgroundColor="AliceBlue"
+                  ItemsSource="{Binding Monkeys}"
+                          Grid.Row="0">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout BackgroundColor="AliceBlue">
+                            <SwipeView>
+                                <SwipeView.TopItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Favorite"
+                                                   IconImageSource="favorite.png"
+                                                   BackgroundColor="LightGreen"
+                                                   Command="{Binding Source={x:Reference carouselView}, Path=BindingContext.FavoriteCommand}"
+                                                   CommandParameter="{Binding}" />
+                                    </SwipeItems>
+                                </SwipeView.TopItems>
+                                <SwipeView.BottomItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="Delete"
+                                                   IconImageSource="delete.png"
+                                                   BackgroundColor="LightPink"
+                                                   Command="{Binding Source={x:Reference carouselView}, Path=BindingContext.DeleteCommand}"
+                                                   CommandParameter="{Binding}" />
+                                    </SwipeItems>
+                                </SwipeView.BottomItems>
+                                <StackLayout>
+
+                                    <Image Source="{Binding ImageUrl}"
+                                                    Aspect="AspectFit"
+                                                    HeightRequest="200"
+                                                    WidthRequest="500"
+                                                    HorizontalOptions="Center" 
+                                        />
+                                    <Label Text="{Binding Name}"
+                                           FontAttributes="Italic"
+                                           FontSize="Large"
+                                           HorizontalOptions="Center"
+                                            />
+                                    <!--<Label Text="{Binding Location}" HorizontalOptions="End" VerticalOptions="End"/>-->
+                                    <!--<Label Text="{Binding Details}" FontAttributes="Italic"
+                                                     HorizontalOptions="Center"
+                                                    MaxLines="5"
+                                                    LineBreakMode="TailTruncation"  VerticalOptions="End"/>-->
+                                </StackLayout>
+                            </SwipeView>
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+
+            <ListView Margin="0"
+                    RowHeight="200"
+                    SelectionMode="None"
+                    Grid.Row="1"
                     ItemsSource="{x:Static data:DogData.Dogs}"
-                    ItemTemplate="{StaticResource AnimalTemplate}"
-                    SelectionMode="Single"
-                    SelectionChanged="OnCollectionViewSelectionChanged" />        
+                    ItemTemplate="{StaticResource AnimalTemplate2}"
+                    ItemTapped="ListView_ItemTapped"
+                  
+                      />
+
+        </Grid>
+    </ScrollView>
+        
+        
+   
 </ContentPage>

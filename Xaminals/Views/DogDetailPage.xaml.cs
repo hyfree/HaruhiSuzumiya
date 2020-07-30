@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FormsVideoLibrary;
+using System;
 using System.Linq;
 using Xamarin.Forms;
 using Xaminals.Data;
@@ -19,6 +20,8 @@ namespace Xaminals.Views
         public DogDetailPage()
         {
             InitializeComponent();
+            videoPlayer.Source = (UriVideoSource)Application.Current.Resources["ElephantsDream"];
+            videoPlayer.Play();
         }
     }
 }
