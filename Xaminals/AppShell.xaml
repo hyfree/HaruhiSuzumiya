@@ -35,7 +35,7 @@
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
-                    Value="#FFC0CB" />
+                    Value="#e4183d" />
         </Style>
         <Style x:Key="RedShell"
                TargetType="Element"
@@ -170,7 +170,7 @@
                       Style="{StaticResource PinkShell}"
                       Title="分类"
                       Icon="volume.png"
-                      ContentTemplate="{DataTemplate views:MonkeysPage}" />
+                      ContentTemplate="{DataTemplate views:VolumePage}" />
         <ShellContent Route="elephants"
                       Style="{StaticResource BlueShell}"
                       Title="动态"

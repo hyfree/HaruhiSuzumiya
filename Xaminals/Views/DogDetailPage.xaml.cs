@@ -22,6 +22,7 @@ namespace Xaminals.Views
             InitializeComponent();
             videoPlayer.Source = (UriVideoSource)Application.Current.Resources["ElephantsDream"];
             videoPlayer.Play();
+           
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Xaminals.Droid
 {
+    //[Activity(Label = "HaruhiSuzumiya", Icon = "@drawable/appIcon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [Activity(Label = "HaruhiSuzumiya", Icon = "@drawable/appIcon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
@@ -23,7 +24,7 @@ namespace Xaminals.Droid
             Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "SwipeView_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            CachedImageRenderer.Init(true);
+            //CachedImageRenderer.Init(true);
             
             LoadApplication(new App());
         }

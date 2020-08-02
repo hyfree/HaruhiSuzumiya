@@ -41,6 +41,7 @@ namespace FormsVideoLibrary.Droid
             _context = context;
             deviceWidth = (int)(context.Resources.DisplayMetrics.WidthPixels / context.Resources.DisplayMetrics.Density);
             deviceHeight = (int)(context.Resources.DisplayMetrics.HeightPixels / context.Resources.DisplayMetrics.Density);
+           
         }
         public VideoPlayerRenderer(Context context) : base(context)
         {
@@ -90,6 +91,7 @@ namespace FormsVideoLibrary.Droid
                 args.NewElement.PlayRequested += OnPlayRequested;
                 args.NewElement.PauseRequested += OnPauseRequested;
                 args.NewElement.StopRequested += OnStopRequested;
+             
             }
 
             if (args.OldElement != null)
@@ -322,6 +324,7 @@ namespace FormsVideoLibrary.Droid
         void OnStopRequested(object sender, EventArgs args)
         {
             videoView.StopPlayback();
+           
         }
 
 

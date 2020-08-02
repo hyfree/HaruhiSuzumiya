@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xaminals.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Xaminals
@@ -12,6 +13,11 @@ namespace Xaminals
             InitializeComponent();
 
             MainPage = new AppShell();
+            //MainPage = new SplashPage();
+            var splashPage = new SplashPage();
+            //var nav = new NavigationPage(splashPage);
+            //this.MainPage = nav;
+          
         }
 
         protected override void OnStart()

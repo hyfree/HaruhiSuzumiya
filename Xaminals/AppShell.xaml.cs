@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 using Xaminals.Data;
 using Xaminals.Views;
 
 namespace Xaminals
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppShell : Shell
     {
         public ICommand NavigateCommand { get; private set; }
@@ -31,7 +33,9 @@ namespace Xaminals
                    await Navigation.PushAsync(page);
                });
             BindingContext = this;
+           
         }
+           
 
         void RegisterRoutes()
         {
@@ -75,7 +79,7 @@ namespace Xaminals
             await Shell.Current.GoToAsync($"{state.Location}/{destinationRoute}?name={animalName}");
             Shell.Current.FlyoutIsPresented = false;
         }
-
+        
         void OnNavigating(object sender, ShellNavigatingEventArgs e)
         {
             // Cancel any back navigation
@@ -87,6 +91,7 @@ namespace Xaminals
 
         void OnNavigated(object sender, ShellNavigatedEventArgs e)
         {
+
         }
     }
 }
