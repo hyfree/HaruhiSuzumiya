@@ -24,7 +24,7 @@ namespace Xaminals.Droid
             Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "SwipeView_Experimental" });
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            //CachedImageRenderer.Init(true);
+            CachedImageRenderer.Init(true);
             
             LoadApplication(new App());
         }

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Xaminals.Views.MePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+
+        <ScrollView>
+            <AbsoluteLayout>
+                <Image
+                    AbsoluteLayout.LayoutBounds="0,0,1,160"
+                    AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional"
+                    Aspect="Fill"
+                    Source="backImage.jpg" />
+                <ffimageloading:CachedImage
+                    AbsoluteLayout.LayoutBounds=".5,32,80,80"
+                    AbsoluteLayout.LayoutFlags="XProportional"
+                    DownsampleToViewSize="true"
+                    HeightRequest="400"
+                    HorizontalOptions="Center"
+                    Source="header"
+                    VerticalOptions="Center"
+                    WidthRequest="400">
+                    <ffimageloading:CachedImage.Transformations>
+                        <fftransformations:CircleTransformation />
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>
+                <Label
+                    AbsoluteLayout.LayoutBounds=".5,120,1,40"
+                    AbsoluteLayout.LayoutFlags="XProportional,WidthProportional"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    HorizontalTextAlignment="Center"
+                    Text="请登录"
+                    TextColor="White" />
+
+                <!--<AbsoluteLayout BackgroundColor="White"
+                        AbsoluteLayout.LayoutBounds="0, 220, 1, 50" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+                    <AbsoluteLayout AbsoluteLayout.LayoutBounds="0,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional">
+                        <Button BackgroundColor="Black" BorderRadius="20"
+                            AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
+                        <Label Text="Accent Color" TextColor="Black"
+                            AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
+                    </AbsoluteLayout>
+                    <AbsoluteLayout AbsoluteLayout.LayoutBounds="1,0,.5,1" AbsoluteLayout.LayoutFlags="WidthProportional,HeightProportional,XProportional">
+                        <Button BackgroundColor="Maroon" BorderRadius="20"
+                            AbsoluteLayout.LayoutBounds="5,.5,40,40" AbsoluteLayout.LayoutFlags="YProportional" />
+                        <Label Text="Primary Color" TextColor="Black"
+                            AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
+                    </AbsoluteLayout>
+                </AbsoluteLayout>-->
+                <AbsoluteLayout
+                    Padding="5,0,0,0"
+                    AbsoluteLayout.LayoutBounds="0,160,1,50"
+                    AbsoluteLayout.LayoutFlags="WidthProportional"
+                    BackgroundColor="AliceBlue">
+                    <StackLayout>
+                        <TableView Intent="Menu">
+                            <TableRoot>
+                                <TableSection>
+                                    <TextCell Text="收藏" TextColor="Black" />
+                                    <TextCell Text="下载" TextColor="Black" />
+                                    <TextCell Text="观看" TextColor="Black" />
+                                    <TextCell Text="设置" TextColor="Black" />
+                                    <TextCell Text="反馈" TextColor="Black" />
+                                    <TextCell Text="版本" TextColor="Black" />
+                                </TableSection>
+
+                            </TableRoot>
+                        </TableView>
+
+                    </StackLayout>
+
+                </AbsoluteLayout>
+
+            </AbsoluteLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

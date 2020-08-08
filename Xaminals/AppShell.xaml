@@ -185,7 +185,7 @@
                       Style="{StaticResource BlueShell}"
                       Title="我的"
                       Icon="user.png"
-                      ContentTemplate="{DataTemplate views:BearsPage}" />
+                      ContentTemplate="{DataTemplate views:MePage}" />
     </FlyoutItem>
 
     <ShellContent Route="about"
