@@ -25,7 +25,7 @@ namespace Xaminals.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
-            
+            CarouselView.FormsPlugin.Android.CarouselViewRenderer.Init();
             LoadApplication(new App());
         }
 

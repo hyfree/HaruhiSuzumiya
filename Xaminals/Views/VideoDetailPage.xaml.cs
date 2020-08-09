@@ -7,7 +7,7 @@ using Xaminals.Data;
 namespace Xaminals.Views
 {
     [QueryProperty("Name", "name")]
-    public partial class DogDetailPage : ContentPage
+    public partial class VideoDetailPage : ContentPage
     {
         public string Name
         {
@@ -17,7 +17,7 @@ namespace Xaminals.Views
             }
         }
 
-        public DogDetailPage()
+        public VideoDetailPage()
         {
             InitializeComponent();
             videoPlayer.Source = (UriVideoSource)Application.Current.Resources["ElephantsDream"];

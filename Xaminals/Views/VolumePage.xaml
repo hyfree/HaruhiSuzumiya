@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Xaminals.Controls"
-             xmlns:data="clr-namespace:Xaminals.Data"
-             xmlns:views="clr-namespace:Xaminals.Views"
-             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-             
-             x:Class="Xaminals.Views.VolumePage"
-             BackgroundColor="AliceBlue"
-             Title="Dogs">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="Xaminals.Views.VolumePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Xaminals.Controls"
+    xmlns:data="clr-namespace:Xaminals.Data"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:views="clr-namespace:Xaminals.Views"
+    Title="Dogs"
+    BackgroundColor="AliceBlue">
     <ContentPage.BindingContext>
         <data:VolumeData />
     </ContentPage.BindingContext>
@@ -31,13 +31,14 @@
     </ContentPage.Resources>
 
     <Shell.SearchHandler>
-        <controls:AnimalSearchHandler Placeholder="Enter search term"
-                                      ShowsResults="true"
-                                      ItemTemplate="{StaticResource AnimalSearchTemplate}"
-                                      Animals="{x:Static data:DogData.Dogs}"
-                                      SelectedItemNavigationTarget="{x:Type views:DogDetailPage}" />
+        <controls:AnimalSearchHandler
+            Animals="{x:Static data:DogData.Dogs}"
+            ItemTemplate="{StaticResource AnimalSearchTemplate}"
+            Placeholder="Enter search term"
+            SelectedItemNavigationTarget="{x:Type views:VideoDetailPage}"
+            ShowsResults="true" />
     </Shell.SearchHandler>
-    <ScrollView  >
+    <ScrollView>
         <Grid Margin="0,20,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -46,40 +47,42 @@
             <CollectionView
                 x:Name="collectionView"
                 ItemsSource="{x:Static data:VolumeData.Volumes}"
-                SelectionMode="Single"
-                SelectionChanged="OnCollectionViewSelectionChanged" 
-                >
+                SelectionChanged="OnCollectionViewSelectionChanged"
+                SelectionMode="Single">
                 <CollectionView.ItemsLayout>
-                    <GridItemsLayout Orientation="Vertical"
-                        Span="3" />
+                    <GridItemsLayout Orientation="Vertical" Span="3" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Grid Margin="20,0,20,0"  HorizontalOptions="Center" VerticalOptions="Center">
+                        <Grid
+                            Margin="20,0,20,0"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="30" />
                             </Grid.RowDefinitions>
 
 
-                            <Image 
-                               Source="{Binding ImageUrl}"
-                                WidthRequest="90"
+                            <Image
+                                Aspect="AspectFit"
                                 HeightRequest="129"
-                               Aspect="AspectFit">
-                            </Image>
-                            <Label Grid.Row="1"  
-                               Text="{Binding Name}" HorizontalOptions="Center" VerticalOptions="Center"
-                                   MaxLines="1"
-                                />
+                                Source="{Binding ImageUrl}"
+                                WidthRequest="90" />
+                            <Label
+                                Grid.Row="1"
+                                HorizontalOptions="Center"
+                                MaxLines="1"
+                                Text="{Binding Name}"
+                                VerticalOptions="Center" />
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-                
+
             </CollectionView>
         </Grid>
     </ScrollView>
-        
-        
-   
+
+
+
 </ContentPage>

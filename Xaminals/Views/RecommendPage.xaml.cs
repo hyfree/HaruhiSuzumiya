@@ -5,10 +5,10 @@ using Xaminals.ViewModels;
 
 namespace Xaminals.Views
 {
-    public partial class DogsPage : ContentPage
+    public partial class RecommendPage : ContentPage
     {
         MainViewModel _vm;
-        public DogsPage()
+        public RecommendPage()
         {
             InitializeComponent();
             //BindingContext = _vm = new MainViewModel();

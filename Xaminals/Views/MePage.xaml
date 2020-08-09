@@ -54,29 +54,22 @@
                             AbsoluteLayout.LayoutBounds="50,.55,1,25" AbsoluteLayout.LayoutFlags="YProportional,WidthProportional" />
                     </AbsoluteLayout>
                 </AbsoluteLayout>-->
-                <AbsoluteLayout
-                    Padding="5,0,0,0"
-                    AbsoluteLayout.LayoutBounds="0,160,1,50"
+                <TableView
+                    AbsoluteLayout.LayoutBounds="0,160,1,500"
                     AbsoluteLayout.LayoutFlags="WidthProportional"
-                    BackgroundColor="AliceBlue">
-                    <StackLayout>
-                        <TableView Intent="Menu">
-                            <TableRoot>
-                                <TableSection>
-                                    <TextCell Text="收藏" TextColor="Black" />
-                                    <TextCell Text="下载" TextColor="Black" />
-                                    <TextCell Text="观看" TextColor="Black" />
-                                    <TextCell Text="设置" TextColor="Black" />
-                                    <TextCell Text="反馈" TextColor="Black" />
-                                    <TextCell Text="版本" TextColor="Black" />
-                                </TableSection>
-
-                            </TableRoot>
-                        </TableView>
-
-                    </StackLayout>
-
-                </AbsoluteLayout>
+                    Intent="Menu"
+                    RowHeight="50">
+                    <TableRoot>
+                        <TableSection>
+                            <TextCell Text="收藏" TextColor="Black" />
+                            <TextCell Text="下载" TextColor="Black" />
+                            <TextCell Text="观看" TextColor="Black" />
+                            <TextCell Text="设置" TextColor="Black" />
+                            <TextCell Text="反馈" TextColor="Black" />
+                            <TextCell Text="版本" TextColor="Black" />
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
 
             </AbsoluteLayout>
         </ScrollView>

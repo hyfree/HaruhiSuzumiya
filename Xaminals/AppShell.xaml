@@ -1,59 +1,52 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<!--FlyoutBackgroundImage="photo.png"-->
-<Shell xmlns="http://xamarin.com/schemas/2014/forms"
-       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:controls="clr-namespace:Xaminals.Controls"
-       xmlns:views="clr-namespace:Xaminals.Views"
-       
-       FlyoutHeaderBehavior="CollapseOnScroll"
-       Navigating="OnNavigating"
-       Navigated="OnNavigated"
-       x:Class="Xaminals.AppShell">
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!--  FlyoutBackgroundImage="photo.png"  -->
+<Shell
+    x:Class="Xaminals.AppShell"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Xaminals.Controls"
+    xmlns:views="clr-namespace:Xaminals.Views"
+    FlyoutHeaderBehavior="CollapseOnScroll"
+    Navigated="OnNavigated"
+    Navigating="OnNavigating">
     <Shell.Resources>
-        <Style x:Key="BaseStyle"
-               TargetType="Element">
-            <Setter Property="Shell.BackgroundColor"
-                    Value="#455A64" />
-            <Setter Property="Shell.ForegroundColor"
-                    Value="White" />
-            <Setter Property="Shell.TitleColor"
-                    Value="White" />
-            <Setter Property="Shell.DisabledColor"
-                    Value="#B4FFFFFF" />
-            <Setter Property="Shell.UnselectedColor"
-                    Value="#95FFFFFF" />
+        <Style x:Key="BaseStyle" TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#455A64" />
+            <Setter Property="Shell.ForegroundColor" Value="White" />
+            <Setter Property="Shell.TitleColor" Value="White" />
+            <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+            <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
         </Style>
-        <Style TargetType="ShellItem"
-               BasedOn="{StaticResource BaseStyle}" />
-        <Style x:Key="DomesticShell"
-               TargetType="Element"
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor"
-                    Value="#039BE6" />
+        <Style BasedOn="{StaticResource BaseStyle}" TargetType="ShellItem" />
+        <Style
+            x:Key="DomesticShell"
+            BasedOn="{StaticResource BaseStyle}"
+            TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#039BE6" />
         </Style>
-        <Style x:Key="PinkShell"
-               TargetType="Element"
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor"
-                    Value="#e4183d" />
+        <Style
+            x:Key="PinkShell"
+            BasedOn="{StaticResource BaseStyle}"
+            TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#039BE6" />
         </Style>
-        <Style x:Key="RedShell"
-               TargetType="Element"
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor"
-                    Value="#ED3B3B" />
+        <Style
+            x:Key="RedShell"
+            BasedOn="{StaticResource BaseStyle}"
+            TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#039BE6" />
         </Style>
-        <Style x:Key="BlueShell"
-               TargetType="Element"
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor"
-                    Value="#546DFE" />
+        <Style
+            x:Key="BlueShell"
+            BasedOn="{StaticResource BaseStyle}"
+            TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#039BE6" />
         </Style>
-        <Style x:Key="PalegreenShell"
-               TargetType="Element"
-               BasedOn="{StaticResource BaseStyle}">
-            <Setter Property="Shell.BackgroundColor"
-                    Value="#96d1ff" />
+        <Style
+            x:Key="PalegreenShell"
+            BasedOn="{StaticResource BaseStyle}"
+            TargetType="Element">
+            <Setter Property="Shell.BackgroundColor" Value="#039BE6" />
         </Style>
     </Shell.Resources>
 
@@ -61,25 +54,25 @@
         <controls:FlyoutHeader />
     </Shell.FlyoutHeader>
 
-    <!-- Template for FlyoutHeader -->
-    <!-- Not required, as the FlyoutHeader is set above -->
+    <!--  Template for FlyoutHeader  -->
+    <!--  Not required, as the FlyoutHeader is set above  -->
     <!--    <Shell.FlyoutHeaderTemplate>
         <DataTemplate>
             <Grid BackgroundColor="Black"
                   HeightRequest="200">
-                <Image Aspect="AspectFill" 
-                       Source="xamarinstore.jpg" 
+                <Image Aspect="AspectFill"
+                       Source="xamarinstore.jpg"
                        Opacity="0.6" />
-                <Label Text="Animals" 
-                       TextColor="White" 
-                       FontAttributes="Bold" 
+                <Label Text="Animals"
+                       TextColor="White"
+                       FontAttributes="Bold"
                        HorizontalTextAlignment="Center"
                        VerticalTextAlignment="Center" />
-            </Grid>            
+            </Grid>
         </DataTemplate>
     </Shell.FlyoutHeaderTemplate>-->
 
-    <!-- Template each FlyoutItem -->
+    <!--  Template each FlyoutItem  -->
     <!--    <Shell.ItemTemplate>
         <DataTemplate>
             <Grid>
@@ -93,12 +86,12 @@
                 <Label Grid.Column="1"
                        Text="{Binding Title}"
                        FontAttributes="Italic"
-                       VerticalTextAlignment="Center" /> 
+                       VerticalTextAlignment="Center" />
             </Grid>
         </DataTemplate>
     </Shell.ItemTemplate>-->
 
-    <!-- Template each MenuItem -->
+    <!--  Template each MenuItem  -->
     <!--    <Shell.MenuItemTemplate>
         <DataTemplate>
             <Grid>
@@ -112,94 +105,107 @@
                 <Label Grid.Column="1"
                        Text="{Binding Text}"
                        FontAttributes="Italic"
-                       VerticalTextAlignment="Center" /> 
+                       VerticalTextAlignment="Center" />
             </Grid>
         </DataTemplate>
     </Shell.MenuItemTemplate>-->
 
-    <FlyoutItem Route="animals"
-                Title="Animals"
-                FlyoutDisplayOptions="AsMultipleItems">
-        <Tab Title="主页"
-             Route="domestic"
-             Icon="home.png">
-            <ShellContent Route="推荐"
-                          Style="{StaticResource DomesticShell}"
-                          Title="推荐"
-                          Icon="home.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
-            <ShellContent Route="cats"
-                          Style="{StaticResource DomesticShell}"
-                          Title="时间线"
-                          Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:CatsPage}" />
-            <ShellContent Route="追番"
-                          Style="{StaticResource DomesticShell}"
-                          Title="追番"
-                          Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
-            <ShellContent Route="漫画"
-                          Style="{StaticResource DomesticShell}"
-                          Title="漫画"
-                          Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
-            <ShellContent Route="图片"
-                          Style="{StaticResource DomesticShell}"
-                          Title="图片"
-                          Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
-            <ShellContent Route="施工现场"
-                          Style="{StaticResource DomesticShell}"
-                          Title="施工现场"
-                          Icon="dog.png"
-                          ContentTemplate="{DataTemplate views:DogsPage}" />
+    <FlyoutItem
+        Title="Animals"
+        FlyoutDisplayOptions="AsMultipleItems"
+        Route="animals">
+        <Tab
+            Title="主页"
+            Icon="home.png"
+            Route="domestic">
+            <ShellContent
+                Title="推荐"
+                ContentTemplate="{DataTemplate views:RecommendPage}"
+                Icon="home.png"
+                Route="推荐"
+                Style="{StaticResource DomesticShell}" />
+            <ShellContent
+                Title="时间线"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Icon="dog.png"
+                Route="cats"
+                Style="{StaticResource DomesticShell}" />
+            <ShellContent
+                Title="追番"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Icon="dog.png"
+                Route="追番"
+                Style="{StaticResource DomesticShell}" />
+            <ShellContent
+                Title="漫画"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Icon="dog.png"
+                Route="漫画"
+                Style="{StaticResource DomesticShell}" />
+            <ShellContent
+                Title="图片"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Icon="dog.png"
+                Route="图片"
+                Style="{StaticResource DomesticShell}" />
+            <ShellContent
+                Title="施工现场"
+                ContentTemplate="{DataTemplate views:CatsPage}"
+                Icon="dog.png"
+                Route="施工现场"
+                Style="{StaticResource DomesticShell}" />
         </Tab>
 
         <!--
-
-        Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
-        This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
-        which can only ever contain Tab objects, which can only ever contain ShellContent objects.
-
-        The code below demonstrates using these implicit conversion operators to simplify the visual hierarchy. Code that
-        relies on the implicit conversion operators will produce intellisense errors in the Visual Studio XAML editor. However,
-        this code is valid and does build.
-               
+            Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
+            This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
+            which can only ever contain Tab objects, which can only ever contain ShellContent objects.
+            
+            The code below demonstrates using these implicit conversion operators to simplify the visual hierarchy. Code that
+            relies on the implicit conversion operators will produce intellisense errors in the Visual Studio XAML editor. However,
+            this code is valid and does build.
         -->
-        <ShellContent Route="monkeys"
-                      Style="{StaticResource PinkShell}"
-                      Title="分类"
-                      Icon="volume.png"
-                      ContentTemplate="{DataTemplate views:VolumePage}" />
-        <ShellContent Route="elephants"
-                      Style="{StaticResource BlueShell}"
-                      Title="动态"
-                      Icon="atm.png"
-                      ContentTemplate="{DataTemplate views:ElephantsPage}" />
-        <ShellContent Route="elephants"
-                      Style="{StaticResource PalegreenShell}"
-                      Title="收藏"
-                      Icon="like.png"
-                      ContentTemplate="{DataTemplate views:ElephantsPage}" />
-        <ShellContent Route="bears"
-                      Style="{StaticResource BlueShell}"
-                      Title="我的"
-                      Icon="user.png"
-                      ContentTemplate="{DataTemplate views:MePage}" />
+        <ShellContent
+            Title="分类"
+            ContentTemplate="{DataTemplate views:VolumePage}"
+            Icon="volume.png"
+            Route="monkeys"
+            Style="{StaticResource PinkShell}" />
+        <ShellContent
+            Title="动态"
+            ContentTemplate="{DataTemplate views:ElephantsPage}"
+            Icon="atm.png"
+            Route="elephants"
+            Style="{StaticResource BlueShell}" />
+        <ShellContent
+            Title="收藏"
+            ContentTemplate="{DataTemplate views:ElephantsPage}"
+            Icon="like.png"
+            Route="elephants"
+            Style="{StaticResource PalegreenShell}" />
+        <ShellContent
+            Title="我的"
+            ContentTemplate="{DataTemplate views:MePage}"
+            Icon="user.png"
+            Route="bears"
+            Style="{StaticResource BlueShell}" />
     </FlyoutItem>
 
-    <ShellContent Route="about"
-                  Style="{StaticResource PalegreenShell}"
-                  Title="About"
-                  Icon="info.png"
-                  ContentTemplate="{DataTemplate views:AboutPage}" />
+    <ShellContent
+        Title="About"
+        ContentTemplate="{DataTemplate views:AboutPage}"
+        Icon="info.png"
+        Route="about"
+        Style="{StaticResource PalegreenShell}" />
 
-    <MenuItem Text="Random"
-              IconImageSource="random.png"
-              Command="{Binding RandomPageCommand}" />
-    <MenuItem Text="Help"
-              IconImageSource="help.png"
-              Command="{Binding HelpCommand}"
-              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
+    <MenuItem
+        Command="{Binding RandomPageCommand}"
+        IconImageSource="random.png"
+        Text="Random" />
+    <MenuItem
+        Command="{Binding HelpCommand}"
+        CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell"
+        IconImageSource="help.png"
+        Text="Help" />
 
 </Shell>
