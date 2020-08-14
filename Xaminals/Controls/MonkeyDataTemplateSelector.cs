@@ -1,7 +1,7 @@
-﻿using CarouselViewDemos.Models;
+﻿using HaruhiSuzumiya.Models;
 using Xamarin.Forms;
 
-namespace CarouselViewDemos.Controls
+namespace HaruhiSuzumiya.Controls
 {
     public class MonkeyDataTemplateSelector : DataTemplateSelector
     {

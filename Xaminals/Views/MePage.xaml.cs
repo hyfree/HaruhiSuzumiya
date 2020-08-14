@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Xaminals.Views
+namespace HaruhiSuzumiya.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MePage : ContentPage

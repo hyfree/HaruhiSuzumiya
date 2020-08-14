@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
-using Xaminals.Models;
-using Xaminals.ViewModels;
+using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.ViewModels;
 
-namespace Xaminals.Views
+namespace HaruhiSuzumiya.Views
 {
     public partial class BearsPage : ContentPage
     {

@@ -1,10 +1,10 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xaminals.Views;
+using HaruhiSuzumiya.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Xaminals
+namespace HaruhiSuzumiya
 {
     public partial class App : Application
     {

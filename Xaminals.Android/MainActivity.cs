@@ -6,7 +6,7 @@ using Android.Runtime;
 using FFImageLoading.Forms.Platform;
 using System.Threading.Tasks;
 
-namespace Xaminals.Droid
+namespace HaruhiSuzumiya.Droid
 {
     //[Activity(Label = "HaruhiSuzumiya", Icon = "@drawable/appIcon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     [Activity(Label = "HaruhiSuzumiya", Icon = "@drawable/appIcon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

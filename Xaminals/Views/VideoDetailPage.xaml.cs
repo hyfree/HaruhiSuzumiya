@@ -2,9 +2,9 @@
 using System;
 using System.Linq;
 using Xamarin.Forms;
-using Xaminals.Data;
+using HaruhiSuzumiya.Data;
 
-namespace Xaminals.Views
+namespace HaruhiSuzumiya.Views
 {
     [QueryProperty("Name", "name")]
     public partial class VideoDetailPage : ContentPage

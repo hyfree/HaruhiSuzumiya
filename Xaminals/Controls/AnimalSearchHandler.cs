@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using Xaminals.Models;
+using HaruhiSuzumiya.Models;
 
-namespace Xaminals.Controls
+namespace HaruhiSuzumiya.Controls
 {
     public class AnimalSearchHandler : SearchHandler
     {

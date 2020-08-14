@@ -6,10 +6,10 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xaminals.Data;
-using Xaminals.Views;
+using HaruhiSuzumiya.Data;
+using HaruhiSuzumiya.Views;
 
-namespace Xaminals
+namespace HaruhiSuzumiya
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppShell : Shell

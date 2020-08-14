@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!--  FlyoutBackgroundImage="photo.png"  -->
 <Shell
-    x:Class="Xaminals.AppShell"
+    x:Class="HaruhiSuzumiya.AppShell"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:Xaminals.Controls"
-    xmlns:views="clr-namespace:Xaminals.Views"
+    xmlns:controls="clr-namespace:HaruhiSuzumiya.Controls"
+    xmlns:views="clr-namespace:HaruhiSuzumiya.Views"
     FlyoutHeaderBehavior="CollapseOnScroll"
     Navigated="OnNavigated"
     Navigating="OnNavigating">

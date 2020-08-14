@@ -1,4 +1,4 @@
-﻿namespace Xaminals.Models
+﻿namespace HaruhiSuzumiya.Models
 {
     public class Animal
     {

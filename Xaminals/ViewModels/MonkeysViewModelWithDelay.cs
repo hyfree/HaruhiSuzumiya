@@ -1,8 +1,8 @@
-﻿using CarouselViewDemos.Models;
+﻿using HaruhiSuzumiya.Models;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
-namespace CarouselViewDemos.ViewModels
+namespace HaruhiSuzumiya.ViewModels
 {
     public class MonkeysViewModelWithDelay
     {

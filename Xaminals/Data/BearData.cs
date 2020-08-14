@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Xaminals.Models;
+using HaruhiSuzumiya.Models;
 
-namespace Xaminals.Data
+namespace HaruhiSuzumiya.Data
 {
     public static class BearData
     {

@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace CarouselViewDemos.Controls
+namespace HaruhiSuzumiya.Controls
 {
     public class FilterData : BindableObject
     {

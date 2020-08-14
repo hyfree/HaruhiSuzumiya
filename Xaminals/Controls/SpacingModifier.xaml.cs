@@ -1,8 +1,8 @@
-﻿using CarouselViewDemos.Helpers;
+﻿using HaruhiSuzumiya.Helpers;
 using System;
 using Xamarin.Forms;
 
-namespace CarouselViewDemos.Controls
+namespace HaruhiSuzumiya.Controls
 {
     public partial class SpacingModifier : ContentView
     {

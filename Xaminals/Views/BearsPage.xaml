@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:Xaminals.Controls"
-             xmlns:data="clr-namespace:Xaminals.Data"
-             xmlns:views="clr-namespace:Xaminals.Views"
-             x:Class="Xaminals.Views.BearsPage"
-             Title="Bears">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="HaruhiSuzumiya.Views.BearsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:HaruhiSuzumiya.Controls"
+    xmlns:data="clr-namespace:HaruhiSuzumiya.Data"
+    xmlns:views="clr-namespace:HaruhiSuzumiya.Views"
+    Title="Bears">
     <ContentPage.Resources>
         <Style TargetType="Grid">
             <Setter Property="VisualStateManager.VisualStateGroups">
@@ -14,8 +15,7 @@
                         <VisualState x:Name="Normal" />
                         <VisualState x:Name="Selected">
                             <VisualState.Setters>
-                                <Setter Property="BackgroundColor" 
-                                        Value="#546DFE" />
+                                <Setter Property="BackgroundColor" Value="#546DFE" />
                             </VisualState.Setters>
                         </VisualState>
                     </VisualStateGroup>
@@ -23,16 +23,17 @@
             </Setter>
         </Style>
     </ContentPage.Resources>
-    
+
     <Shell.SearchHandler>
-        <controls:AnimalSearchHandler Placeholder="Enter search term"
-                                      ShowsResults="true"
-                                      ItemTemplate="{StaticResource AnimalSearchTemplate}"
-                                      Animals="{x:Static data:BearData.Bears}"
-                                      SelectedItemNavigationTarget="{x:Type views:BearDetailPage}" />
+        <controls:AnimalSearchHandler
+            Animals="{x:Static data:BearData.Bears}"
+            ItemTemplate="{StaticResource AnimalSearchTemplate}"
+            Placeholder="Enter search term"
+            SelectedItemNavigationTarget="{x:Type views:BearDetailPage}"
+            ShowsResults="true" />
     </Shell.SearchHandler>
-   
-<!--    <Shell.SearchHandler>
+
+    <!--    <Shell.SearchHandler>
         <SearchHandler x:Name="searchHandler"
                        Placeholder="Enter search term"
                        ShowsResults="true"
@@ -41,10 +42,11 @@
                        ItemsSource="{Binding SearchResults}"
                        ItemTemplate="{StaticResource AnimalSearchTemplate}" />
     </Shell.SearchHandler>-->
-    
-    <CollectionView Margin="20"
-                    ItemsSource="{x:Static data:BearData.Bears}"
-                    ItemTemplate="{StaticResource AnimalTemplate}"
-                    SelectionMode="Single"
-                    SelectionChanged="OnCollectionViewSelectionChanged" />
+
+    <CollectionView
+        Margin="20"
+        ItemTemplate="{StaticResource AnimalTemplate}"
+        ItemsSource="{x:Static data:BearData.Bears}"
+        SelectionChanged="OnCollectionViewSelectionChanged"
+        SelectionMode="Single" />
 </ContentPage>

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using Android.Content;
 using Xamarin.Forms;
-using Xaminals.Droid;
+using HaruhiSuzumiya.Droid;
 
 // Need application's MainActivity
 

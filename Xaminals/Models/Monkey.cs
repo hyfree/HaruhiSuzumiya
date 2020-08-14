@@ -1,4 +1,4 @@
-﻿namespace CarouselViewDemos.Models
+﻿namespace HaruhiSuzumiya.Models
 {
     public class Monkey
     {

@@ -1,4 +1,4 @@
-﻿namespace CarouselViewDemos.Helpers
+﻿namespace HaruhiSuzumiya.Helpers
 {
     public static class IndexParser
     {

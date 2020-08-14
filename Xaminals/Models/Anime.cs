@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Xaminals.Models
+namespace HaruhiSuzumiya.Models
 {
     public  class Anime
     {

@@ -7,7 +7,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
-namespace Xaminals.Views
+namespace HaruhiSuzumiya.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SplashPage : ContentPage

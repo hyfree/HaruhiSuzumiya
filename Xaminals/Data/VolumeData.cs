@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Xaminals.Models;
+using HaruhiSuzumiya.Models;
 
-namespace Xaminals.Data
+namespace HaruhiSuzumiya.Data
 {
     public class VolumeData
     {

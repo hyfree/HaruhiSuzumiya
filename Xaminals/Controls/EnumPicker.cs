@@ -2,7 +2,7 @@
 using System.Reflection;
 using Xamarin.Forms;
 
-namespace CarouselViewDemos.Controls
+namespace HaruhiSuzumiya.Controls
 {
     public class EnumPicker : Picker
     {

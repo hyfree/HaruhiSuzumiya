@@ -120,7 +120,7 @@ namespace FormsVideoLibrary.Droid
                 }
             }
             imageView = new ImageView(_context) { };
-            imageView.SetImageResource(Xaminals.Droid.Resource.Drawable.portrait_mode);
+            imageView.SetImageResource(HaruhiSuzumiya.Droid.Resource.Drawable.portrait_mode);
             var lv = new Android.Widget.RelativeLayout.LayoutParams(60, 60);
             lv.SetMargins(0, 30, 30, 0);
             lv.AddRule(LayoutRules.AlignParentRight);
@@ -152,7 +152,7 @@ namespace FormsVideoLibrary.Droid
             var window = (_context as Activity).Window;
             window.AddFlags(WindowManagerFlags.Fullscreen);
          
-            imageView.SetImageResource(Xaminals.Droid.Resource.Drawable.landscape_mode);
+            imageView.SetImageResource(HaruhiSuzumiya.Droid.Resource.Drawable.landscape_mode);
             isFullScreen = true;
             if (resizeLayout)
             {
@@ -174,7 +174,7 @@ namespace FormsVideoLibrary.Droid
             if (!isFullScreen)
                 return;
 
-            imageView.SetImageResource(Xaminals.Droid.Resource.Drawable.portrait_mode);
+            imageView.SetImageResource(HaruhiSuzumiya.Droid.Resource.Drawable.portrait_mode);
             _context.RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             var window = (_context as Activity).Window;
             window.ClearFlags(WindowManagerFlags.Fullscreen);

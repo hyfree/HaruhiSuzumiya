@@ -3,10 +3,10 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Xamarin.Forms;
-using Xaminals.Data;
-using Xaminals.Models;
+using HaruhiSuzumiya.Data;
+using HaruhiSuzumiya.Models;
 
-namespace Xaminals.ViewModels
+namespace HaruhiSuzumiya.ViewModels
 {
     [QueryProperty("MonkeyName", "name")]
     public class MonkeyDetailViewModel : INotifyPropertyChanged
