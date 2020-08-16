@@ -31,12 +31,14 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
-    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidDexTool>dx</AndroidDexTool>
+    <AndroidDexTool>d8</AndroidDexTool>
     <MandroidI18n />
     <AndroidSupportedAbis />
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +57,7 @@
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <MandroidI18n />
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -213,144 +216,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\splash_screen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\60x60.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\cbd.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\login-1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\me.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\muwu.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\qrcode.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\shuijiao.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\yuantiao.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\bg\chimian.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\bg\timg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\baihe.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\danmei.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\gaoxiao.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\hougong.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\jizhan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\juchangban.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\kehuan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\kongbu.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\lianai.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\lizhi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\luoli.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\maoxian.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\meishaonv.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\paomianfan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\qihuan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\qingchun.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\qingxiaoshuo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\rexue.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\roufan.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\tongnian.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\tuili.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\yinv.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\youxi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\yundong.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\zhenren.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\zhiyuxi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\classify\zhuangbi.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\collection\no.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\lunbo\overlord.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\lunbo\nsywl.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\lunbo\wdyx.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\lunbo\ysjmw.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\biaoqing\1.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\biaoqing\2.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\wwww\images\biaoqing\3.gif" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\gaoxiao.jpg" />
