@@ -6,8 +6,8 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using HaruhiSuzumiya.Data;
-using HaruhiSuzumiya.Views;
+using HaruhiSuzumiya.APP.Data;
+using HaruhiSuzumiya.APP.Views;
 
 namespace HaruhiSuzumiya
 {

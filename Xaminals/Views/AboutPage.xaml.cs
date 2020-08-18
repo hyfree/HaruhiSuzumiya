@@ -2,7 +2,7 @@
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
-namespace HaruhiSuzumiya.Views
+namespace HaruhiSuzumiya.APP.Views
 {
     public partial class AboutPage : ContentPage
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace HaruhiSuzumiya.Models
+namespace HaruhiSuzumiya.APP.Models
 {
     public class Volume
     {

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage
-    x:Class="HaruhiSuzumiya.Views.VolumePage"
+    x:Class="HaruhiSuzumiya.APP.Views.VolumePage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:HaruhiSuzumiya.Controls"
-    xmlns:data="clr-namespace:HaruhiSuzumiya.Data"
+    xmlns:data="clr-namespace:HaruhiSuzumiya.APP.Data"
     xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    xmlns:views="clr-namespace:HaruhiSuzumiya.Views"
+    xmlns:views="clr-namespace:HaruhiSuzumiya.APP.Views"
     Title="Dogs"
     BackgroundColor="AliceBlue">
     <ContentPage.BindingContext>

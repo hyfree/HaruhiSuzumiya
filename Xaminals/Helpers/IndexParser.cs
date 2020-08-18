@@ -1,4 +1,4 @@
-﻿namespace HaruhiSuzumiya.Helpers
+﻿namespace HaruhiSuzumiya.APP.Helpers
 {
     public static class IndexParser
     {

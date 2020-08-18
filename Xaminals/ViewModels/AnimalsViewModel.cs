@@ -6,9 +6,9 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.APP.Models;
 
-namespace HaruhiSuzumiya.ViewModels
+namespace HaruhiSuzumiya.APP.ViewModels
 {
     public class AnimalsViewModel : INotifyPropertyChanged
     {

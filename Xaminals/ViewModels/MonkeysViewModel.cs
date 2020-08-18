@@ -1,4 +1,4 @@
-﻿using HaruhiSuzumiya.Models;
+﻿using HaruhiSuzumiya.APP.Models;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 using Xamarin.Forms;
 
-namespace HaruhiSuzumiya.ViewModels
+namespace HaruhiSuzumiya.APP.ViewModels
 {
     public class MonkeysViewModel : INotifyPropertyChanged
     {

@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
-using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.APP.Models;
 
-namespace HaruhiSuzumiya.Views
+namespace HaruhiSuzumiya.APP.Views
 {
     public partial class ElephantsPage : ContentPage
     {

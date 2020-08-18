@@ -121,9 +121,9 @@
     <Folder Include="Resources\drawable-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Xaminals\HaruhiSuzumiya.csproj">
+    <ProjectReference Include="..\Xaminals\HaruhiSuzumiya.APP.csproj">
       <Project>{CD4DE9E8-2721-47F3-BA95-999B6F75FF27}</Project>
-      <Name>HaruhiSuzumiya</Name>
+      <Name>HaruhiSuzumiya.APP</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using Xamarin.Forms;
-using HaruhiSuzumiya.ViewModels;
+using HaruhiSuzumiya.APP.ViewModels;
 
-namespace HaruhiSuzumiya.Views
+namespace HaruhiSuzumiya.APP.Views
 {
     public partial class MonkeyDetailPage : ContentPage
     {

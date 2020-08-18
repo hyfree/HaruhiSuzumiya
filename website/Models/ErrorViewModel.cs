@@ -1,6 +1,6 @@
 using System;
 
-namespace AiLiDao.Models
+namespace HaruhiSuzumiya.Models
 {
     public class ErrorViewModel
     {

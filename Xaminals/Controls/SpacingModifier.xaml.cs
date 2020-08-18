@@ -1,8 +1,8 @@
-﻿using HaruhiSuzumiya.Helpers;
+﻿using HaruhiSuzumiya.APP.Helpers;
 using System;
 using Xamarin.Forms;
 
-namespace HaruhiSuzumiya.Controls
+namespace HaruhiSuzumiya.APP.Controls
 {
     public partial class SpacingModifier : ContentView
     {

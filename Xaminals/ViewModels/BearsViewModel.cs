@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Windows.Input;
 using Xamarin.Forms;
-using HaruhiSuzumiya.Data;
-using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.APP.Data;
+using HaruhiSuzumiya.APP.Models;
 
-namespace HaruhiSuzumiya.ViewModels
+namespace HaruhiSuzumiya.APP.ViewModels
 {
     public class BearsViewModel
     {

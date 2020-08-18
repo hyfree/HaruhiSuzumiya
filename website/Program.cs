@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace AiLiDao
+namespace HaruhiSuzumiya
 {
     public class Program
     {

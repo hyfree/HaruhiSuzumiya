@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.APP.Models;
 
-namespace HaruhiSuzumiya.Data
+namespace HaruhiSuzumiya.APP.Data
 {
     public static class BearData
     {

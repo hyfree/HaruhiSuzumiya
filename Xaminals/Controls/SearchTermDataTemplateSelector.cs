@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace HaruhiSuzumiya.Controls
+namespace HaruhiSuzumiya.APP.Controls
 {
     public class SearchTermDataTemplateSelector : DataTemplateSelector
     {

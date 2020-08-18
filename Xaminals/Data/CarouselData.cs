@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.APP.Models;
 
-namespace HaruhiSuzumiya.Data
+namespace HaruhiSuzumiya.APP.Data
 {
     public class CarouselData
     {

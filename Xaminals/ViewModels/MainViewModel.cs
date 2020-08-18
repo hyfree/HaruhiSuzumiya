@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using Xamarin.Forms;
 
-namespace HaruhiSuzumiya.ViewModels
+namespace HaruhiSuzumiya.APP.ViewModels
 {
     public class MainViewModel : INotifyPropertyChanged
     {

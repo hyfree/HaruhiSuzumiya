@@ -1,8 +1,8 @@
-﻿using HaruhiSuzumiya.Models;
+﻿using HaruhiSuzumiya.APP.Models;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 
-namespace HaruhiSuzumiya.ViewModels
+namespace HaruhiSuzumiya.APP.ViewModels
 {
     public class MonkeysViewModelWithDelay
     {

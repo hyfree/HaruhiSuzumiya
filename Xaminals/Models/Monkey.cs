@@ -1,4 +1,4 @@
-﻿namespace HaruhiSuzumiya.Models
+﻿namespace HaruhiSuzumiya.APP.Models
 {
     public class Monkey
     {

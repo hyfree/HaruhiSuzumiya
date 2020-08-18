@@ -1,7 +1,7 @@
-﻿using HaruhiSuzumiya.Models;
+﻿using HaruhiSuzumiya.APP.Models;
 using Xamarin.Forms;
 
-namespace HaruhiSuzumiya.Controls
+namespace HaruhiSuzumiya.APP.Controls
 {
     public class MonkeyDataTemplateSelector : DataTemplateSelector
     {

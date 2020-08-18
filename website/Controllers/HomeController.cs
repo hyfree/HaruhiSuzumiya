@@ -1,11 +1,11 @@
 ﻿using System.Diagnostics;
 
-using AiLiDao.Models;
+using HaruhiSuzumiya.Models;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace AiLiDao.Controllers
+namespace HaruhiSuzumiya.Controllers
 {
     [Route("/{action=Anime}")]
     public class HomeController : Controller

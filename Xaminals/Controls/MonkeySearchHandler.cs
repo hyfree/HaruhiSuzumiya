@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-using HaruhiSuzumiya.Data;
-using HaruhiSuzumiya.Models;
+using HaruhiSuzumiya.APP.Data;
+using HaruhiSuzumiya.APP.Models;
 
-namespace HaruhiSuzumiya.Controls
+namespace HaruhiSuzumiya.APP.Controls
 {
     public class MonkeySearchHandler : SearchHandler
     {

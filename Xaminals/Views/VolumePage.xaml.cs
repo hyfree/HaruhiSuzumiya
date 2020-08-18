@@ -1,9 +1,9 @@
 ﻿using System.Linq;
 using Xamarin.Forms;
-using HaruhiSuzumiya.Models;
-using HaruhiSuzumiya.ViewModels;
+using HaruhiSuzumiya.APP.Models;
+using HaruhiSuzumiya.APP.ViewModels;
 
-namespace HaruhiSuzumiya.Views
+namespace HaruhiSuzumiya.APP.Views
 {
     public partial class VolumePage : ContentPage
     {

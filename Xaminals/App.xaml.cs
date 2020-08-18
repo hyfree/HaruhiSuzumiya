@@ -1,7 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using HaruhiSuzumiya.Views;
+using HaruhiSuzumiya.APP.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace HaruhiSuzumiya
