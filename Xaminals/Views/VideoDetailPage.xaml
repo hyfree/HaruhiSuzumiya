@@ -51,21 +51,37 @@
                 </tabview:TabItem>
 
                 <tabview:TabItem HeaderText="评论">
-                    <ListView>
-                        <ListView.ItemsSource>
-                            <x:Array Type="{x:Type x:String}">
-                                <x:String>mono</x:String>
-                                <x:String>monodroid</x:String>
-                                <x:String>monotouch</x:String>
-                                <x:String>monorail</x:String>
-                                <x:String>monodevelop</x:String>
-                                <x:String>monotone</x:String>
-                                <x:String>monopoly</x:String>
-                                <x:String>monomodal</x:String>
-                                <x:String>mononucleosis</x:String>
-                            </x:Array>
-                        </ListView.ItemsSource>
-                    </ListView>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <ListView Grid.Row="0">
+                            <ListView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>mono</x:String>
+                                    <x:String>monodroid</x:String>
+                                    <x:String>monotouch</x:String>
+                                    <x:String>monorail</x:String>
+                                    <x:String>monodevelop</x:String>
+                                    <x:String>monotone</x:String>
+                                    <x:String>monopoly</x:String>
+                                    <x:String>monomodal</x:String>
+                                    <x:String>mononucleosis</x:String>
+                                </x:Array>
+                            </ListView.ItemsSource>
+
+                        </ListView>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Editor Grid.Column="0" />
+                            <Button Grid.Column="1" Text="发送" />
+                        </Grid>
+                    </Grid>
+
                 </tabview:TabItem>
 
                 <tabview:TabItem HeaderText="剧集">

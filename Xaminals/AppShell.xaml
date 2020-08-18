@@ -149,10 +149,10 @@
                 Route="图片"
                 Style="{StaticResource DomesticShell}" />
             <ShellContent
-                Title="施工现场"
-                ContentTemplate="{DataTemplate views:CatsPage}"
+                Title="WebKit"
+                ContentTemplate="{DataTemplate views:WebKitPage}"
                 Icon="dog.png"
-                Route="施工现场"
+                Route="WebKit"
                 Style="{StaticResource DomesticShell}" />
         </Tab>
 

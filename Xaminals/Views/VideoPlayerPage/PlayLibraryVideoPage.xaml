@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:video="clr-namespace:FormsVideoLibrary"
-             x:Class="VideoPlayerDemos.PlayLibraryVideoPage"
-             Title="Play Library Video">
+<ContentPage
+    x:Class="VideoPlayerDemos.PlayLibraryVideoPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:video="clr-namespace:FormsVideoLibrary"
+    Title="Play Library Video">
     <StackLayout>
-        <video:VideoPlayer x:Name="videoPlayer"
-                           VerticalOptions="FillAndExpand" />
+        <video:VideoPlayer x:Name="videoPlayer" VerticalOptions="FillAndExpand" />
 
-        <Button Text="Show Video Library"
-                Margin="10"
-                HorizontalOptions="Center"
-                Clicked="OnShowVideoLibraryClicked" />
+        <Button
+            Margin="10"
+            Clicked="OnShowVideoLibraryClicked"
+            HorizontalOptions="Center"
+            Text="Show Video Library" />
     </StackLayout>
 </ContentPage>

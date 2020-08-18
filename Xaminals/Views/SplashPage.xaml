@@ -1,24 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="HaruhiSuzumiya.Views.SplashPage">
+<ContentPage
+    x:Class="HaruhiSuzumiya.Views.SplashPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="80*"></RowDefinition>
-                <RowDefinition Height="20*"></RowDefinition>
+                <RowDefinition Height="80*" />
+                <RowDefinition Height="20*" />
             </Grid.RowDefinitions>
-           
-            <ImageButton Source="splash_screen.jpg" 
-                   Aspect="AspectFill" Clicked="ImageButton_Clicked" ></ImageButton>
+
+            <ImageButton
+                Aspect="AspectFill"
+                Clicked="ImageButton_Clicked"
+                Source="splash_screen.jpg" />
             <StackLayout Grid.Row="1" Padding="20,0,20,0">
-                <Label Text="    我孤注一掷的勇气，与无法预料的未来，统统交到了你手中。那从这一刻起，拜托你负责照料好手中紧握的我的一切。" MaxLines="2"></Label>
+                <Label MaxLines="2" Text="    我孤注一掷的勇气，与无法预料的未来，统统交到了你手中。那从这一刻起，拜托你负责照料好手中紧握的我的一切。" />
                 <Label HorizontalOptions="End">来自：一言</Label>
             </StackLayout>
-            
+
         </Grid>
     </ContentPage.Content>
 </ContentPage>

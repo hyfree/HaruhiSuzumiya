@@ -1,30 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="HaruhiSuzumiya.Views.MonkeyDetailPage"
-             x:Name="self"
-             Title="Monkey Details">
-    
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="HaruhiSuzumiya.Views.MonkeyDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="self"
+    Title="Monkey Details">
+
     <Shell.BackButtonBehavior>
-        <BackButtonBehavior Command="{Binding BackCommand}"
-                            BindingContext="{Binding Source={x:Reference self}, Path=BindingContext}"
-                            IconOverride="back.png" />   
+        <BackButtonBehavior
+            BindingContext="{Binding Source={x:Reference self}, Path=BindingContext}"
+            Command="{Binding BackCommand}"
+            IconOverride="back.png" />
     </Shell.BackButtonBehavior>
-   
+
     <ScrollView>
         <StackLayout Margin="20">
-            <Label Text="{Binding Name}" 
-                   HorizontalOptions="Center" 
-                   Style="{DynamicResource TitleStyle}" />
-            <Label Text="{Binding Location}" 
-                   FontAttributes="Italic" 
-                   HorizontalOptions="Center" />
-            <Image Source="{Binding ImageUrl}" 
-                   HeightRequest="200" 
-                   WidthRequest="200" 
-                   HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding Details}" 
-                   Style="{DynamicResource BodyStyle}" />
+            <Label
+                HorizontalOptions="Center"
+                Style="{DynamicResource TitleStyle}"
+                Text="{Binding Name}" />
+            <Label
+                FontAttributes="Italic"
+                HorizontalOptions="Center"
+                Text="{Binding Location}" />
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="{Binding ImageUrl}"
+                WidthRequest="200" />
+            <Label Style="{DynamicResource BodyStyle}" Text="{Binding Details}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>

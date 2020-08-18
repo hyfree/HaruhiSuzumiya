@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HaruhiSuzumiya.Views.ElephantDetailPage"
-             Title="Elephant Details">
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="HaruhiSuzumiya.Views.ElephantDetailPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Elephant Details">
     <ScrollView>
         <StackLayout Margin="20">
-            <Label Text="{Binding Name}" 
-                   HorizontalOptions="Center" 
-                   Style="{DynamicResource TitleStyle}" />
-            <Label Text="{Binding Location}" 
-                   FontAttributes="Italic" 
-                   HorizontalOptions="Center" />
-            <Image Source="{Binding ImageUrl}" 
-                   HeightRequest="200" 
-                   WidthRequest="200" 
-                   HorizontalOptions="CenterAndExpand" />
-            <Label Text="{Binding Details}" 
-                   Style="{DynamicResource BodyStyle}" />
+            <Label
+                HorizontalOptions="Center"
+                Style="{DynamicResource TitleStyle}"
+                Text="{Binding Name}" />
+            <Label
+                FontAttributes="Italic"
+                HorizontalOptions="Center"
+                Text="{Binding Location}" />
+            <Image
+                HeightRequest="200"
+                HorizontalOptions="CenterAndExpand"
+                Source="{Binding ImageUrl}"
+                WidthRequest="200" />
+            <Label Style="{DynamicResource BodyStyle}" Text="{Binding Details}" />
         </StackLayout>
     </ScrollView>
 </ContentPage>
