@@ -12,6 +12,13 @@ namespace HaruhiSuzumiya.APP.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SplashPage : ContentPage
     {
+        private App app;
+        private Task startupWork = null;
+        public void SetAPP(App oneApp)
+        {
+            app = oneApp;
+
+        }
         public SplashPage()
         {
             InitializeComponent();
@@ -19,39 +26,33 @@ namespace HaruhiSuzumiya.APP.Views
         protected override void OnAppearing()
         {
             Console.WriteLine("hello");
-            Task startupWork = new Task(() => { SimulateStartup(); });
-          //  startupWork.Start();
-
-        }  
+            if (startupWork == null)
+            {
+                startupWork = new Task(() => { SimulateStartup(); });
+                startupWork.Start();
+            }
+        }
         protected override void OnDisappearing()
         {
 
         }
-        async void SimulateStartup()
+
+        private async void SimulateStartup()
         {
-          await  MainThread.InvokeOnMainThreadAsync(async () =>
-            {
-                await Task.Delay(3000); // Simulate a bit of startup work.
-                Console.WriteLine("调用SimulateStartup");
-                // await Navigation.PushModalAsync(new AppShell());
-                //Navigation.InsertPageBefore(new AppShell(), this);
-                //await Navigation.PopAsync();
-                //  Navigation.RemovePage(this);
-                // Code to run on the main thread
-               // await  Navigation.PopAsync();
-                await  Navigation.PushAsync(new AppShell());
-            });
-  
-           
-           
+            await MainThread.InvokeOnMainThreadAsync(async () =>
+             {
+                 await Task.Delay(3000); // Simulate a bit of startup work.
+                 Console.WriteLine("调用SimulateStartup");
+                 app.MainPage=new AppShell();
+             });
         }
 
 
 
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
-             Navigation.PopAsync();
-             Navigation.PushAsync(new AppShell());
+            Navigation.PopAsync();
+            Navigation.PushAsync(new AppShell());
         }
     }
 }

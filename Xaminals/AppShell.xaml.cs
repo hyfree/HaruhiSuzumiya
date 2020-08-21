@@ -14,6 +14,7 @@ namespace HaruhiSuzumiya
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AppShell : Shell
     {
+       
         public ICommand NavigateCommand { get; private set; }
         Random rand = new Random();
         Dictionary<string, Type> routes = new Dictionary<string, Type>();
@@ -22,6 +23,7 @@ namespace HaruhiSuzumiya
         public ICommand HelpCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
         public ICommand RandomPageCommand => new Command(async () => await NavigateToRandomPageAsync());
 
+   
         public AppShell()
         {
             InitializeComponent();

@@ -1,7 +1,7 @@
-﻿using System;
+﻿using HaruhiSuzumiya.APP.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using HaruhiSuzumiya.APP.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace HaruhiSuzumiya
@@ -12,12 +12,18 @@ namespace HaruhiSuzumiya
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            SplashPage splashPage = new SplashPage();
+            splashPage.SetAPP(this);
+            App.Current.MainPage = splashPage;
+
+
+            //MainPage = new AppShell();
             //MainPage = new SplashPage();
-            var splashPage = new SplashPage();
+
+
             //var nav = new NavigationPage(splashPage);
             //this.MainPage = nav;
-          
+
         }
 
         protected override void OnStart()
