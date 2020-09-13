@@ -24,8 +24,11 @@
     <ProjectReference Include="..\HaruhiSuzumiya.Common\HaruhiSuzumiya.Common.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\VideoDetailPage.xaml.cs">
-      <DependentUpon>VideoDetailPage.xaml</DependentUpon>
+    <Compile Update="Views\AnimeDetailPage.xaml.cs">
+      <DependentUpon>AnimeDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\AnimePlayPage.xaml.cs">
+      <DependentUpon>AnimePlayPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\RecommendPage.xaml.cs">
       <DependentUpon>RecommendPage.xaml</DependentUpon>

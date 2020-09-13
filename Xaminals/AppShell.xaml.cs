@@ -44,7 +44,8 @@ namespace HaruhiSuzumiya
             routes.Add("monkeydetails", typeof(MonkeyDetailPage));
             routes.Add("beardetails", typeof(BearDetailPage));
             routes.Add("catdetails", typeof(CatDetailPage));
-            routes.Add("dogdetails", typeof(VideoDetailPage));
+            routes.Add("videodetails", typeof(VideoDetailPage));
+            routes.Add("AnimePlay", typeof(AnimePlayPage));
             routes.Add("elephantdetails", typeof(ElephantDetailPage));
 
             foreach (var item in routes)

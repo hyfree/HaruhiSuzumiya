@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    x:Class="HaruhiSuzumiya.APP.Views.AnimePlayPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:tabview="clr-namespace:Xam.Plugin.TabView;assembly=Xam.Plugin.TabView"
+    xmlns:video="clr-namespace:FormsVideoLibrary"
+    Title="动漫播放页">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <video:VideoPlayer
+            x:Name="videoPlayer"
+            Grid.Row="0"
+            BackgroundColor="Black"
+            Source="https://www.runoob.com/try/demo_source/movie.mp4" />
+        <tabview:TabViewControl
+            Grid.Row="1"
+            ContentHeight="100"
+            HeaderBackgroundColor="SkyBlue"
+            HeaderSelectionUnderlineColor="White"
+            HeaderTabTextColor="White"
+            HeaderTabTextFontAttributes="Bold"
+            HorizontalOptions="FillAndExpand"
+            IsSwipeEnabled="True"
+            TabHeaderSpacing="100"
+            VerticalOptions="FillAndExpand">
+            <tabview:TabViewControl.ItemSource>
+                <tabview:TabItem HeaderText="简介">
+                    <ScrollView>
+                        <StackLayout Grid.Row="1">
+                            <Label
+                                HorizontalOptions="Center"
+                                Style="{DynamicResource TitleStyle}"
+                                Text="{Binding Name}" />
+                            <Label
+                                FontAttributes="Italic"
+                                HorizontalOptions="Center"
+                                Text="{Binding Location}" />
+                            <Image
+                                HeightRequest="200"
+                                HorizontalOptions="CenterAndExpand"
+                                Source="{Binding ImageUrl}"
+                                WidthRequest="200" />
+                            <Label Style="{DynamicResource BodyStyle}" Text="{Binding Details}" />
+                        </StackLayout>
+                    </ScrollView>
+
+                </tabview:TabItem>
+
+                <tabview:TabItem HeaderText="评论">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="40" />
+                        </Grid.RowDefinitions>
+                        <ListView Grid.Row="0">
+                            <ListView.ItemsSource>
+                                <x:Array Type="{x:Type x:String}">
+                                    <x:String>mono</x:String>
+                                    <x:String>monodroid</x:String>
+                                    <x:String>monotouch</x:String>
+                                    <x:String>monorail</x:String>
+                                    <x:String>monodevelop</x:String>
+                                    <x:String>monotone</x:String>
+                                    <x:String>monopoly</x:String>
+                                    <x:String>monomodal</x:String>
+                                    <x:String>mononucleosis</x:String>
+                                </x:Array>
+                            </ListView.ItemsSource>
+
+                        </ListView>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="100" />
+                            </Grid.ColumnDefinitions>
+                            <Editor Grid.Column="0" />
+                            <Button Grid.Column="1" Text="发送" />
+                        </Grid>
+                    </Grid>
+
+                </tabview:TabItem>
+
+                <tabview:TabItem HeaderText="剧集">
+                    <ListView>
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>mono</x:String>
+                                <x:String>monodroid</x:String>
+                                <x:String>monotouch</x:String>
+                                <x:String>monorail</x:String>
+                                <x:String>monodevelop</x:String>
+                                <x:String>monotone</x:String>
+                                <x:String>monopoly</x:String>
+                                <x:String>monomodal</x:String>
+                                <x:String>mononucleosis</x:String>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                    </ListView>
+                </tabview:TabItem>
+            </tabview:TabViewControl.ItemSource>
+        </tabview:TabViewControl>
+
+
+    </Grid>
+</ContentPage>
