@@ -22,7 +22,7 @@ namespace HaruhiSuzumiya.APP.ViewModels
                     Name = monkey.Name;
                     Location = monkey.Location;
                     Details = monkey.Details;
-                    ImageUrl = monkey.ImageUrl;
+                    ImageUrl = monkey.CoverImageUrl;
                     OnPropertyChanged("Name");
                     OnPropertyChanged("Location");
                     OnPropertyChanged("Details");

@@ -26,7 +26,7 @@
 
     <Shell.SearchHandler>
         <controls:AnimalSearchHandler
-            Animals="{x:Static data:CatData.Cats}"
+            Animes="{x:Static data:AnimeData.AnimeImages}"
             ItemTemplate="{StaticResource AnimalSearchTemplate}"
             Placeholder="Enter search term"
             SelectedItemNavigationTarget="{x:Type views:CatDetailPage}"

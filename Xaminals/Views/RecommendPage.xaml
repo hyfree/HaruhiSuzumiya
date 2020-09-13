@@ -34,7 +34,7 @@
 
     <Shell.SearchHandler>
         <controls:AnimalSearchHandler
-            Animals="{x:Static data:DogData.Dogs}"
+            Animes="{x:Static data:AnimeData.AnimeImages}"
             ItemTemplate="{StaticResource AnimalSearchTemplate}"
             Placeholder="Enter search term"
             SelectedItemNavigationTarget="{x:Type views:VideoDetailPage}"
@@ -85,7 +85,7 @@
                                         Aspect="AspectFill"
                                         HeightRequest="200"
                                         HorizontalOptions="Center"
-                                        Source="{Binding ImageUrl}"
+                                        Source="{Binding CoverImageUrl}"
                                         WidthRequest="500" />
                                     <Label
                                         FontAttributes="Italic"
@@ -109,10 +109,9 @@
                 Margin="0"
                 ItemTapped="ListView_ItemTapped"
                 ItemTemplate="{StaticResource RecommendListTemplate}"
-                ItemsSource="{x:Static data:DogData.Dogs}"
+                ItemsSource="{x:Static data:RecommendData.RecommendImages}"
                 RowHeight="200"
                 SelectionMode="None" />
-
         </Grid>
     </ScrollView>
 

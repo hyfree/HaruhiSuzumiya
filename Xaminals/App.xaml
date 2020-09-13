@@ -20,7 +20,7 @@
                     Grid.RowSpan="2"
                     Aspect="AspectFill"
                     HeightRequest="160"
-                    Source="{Binding ImageUrl}"
+                    Source="{Binding CoverImageUrl}"
                     WidthRequest="120" />
 
                 <StackLayout
@@ -58,7 +58,7 @@
                         Grid.RowSpan="2"
                         Aspect="AspectFit"
                         HeightRequest="160"
-                        Source="{Binding ImageUrl}"
+                        Source="{Binding CoverImageUrl}"
                         WidthRequest="120" />
 
                     <StackLayout
@@ -98,7 +98,7 @@
                         Grid.RowSpan="2"
                         Aspect="AspectFit"
                         HeightRequest="160"
-                        Source="{Binding ImageUrl}"
+                        Source="{Binding CoverImageUrl}"
                         WidthRequest="120" />
 
                     <StackLayout
@@ -132,7 +132,7 @@
                 <Image
                     Aspect="AspectFill"
                     HeightRequest="40"
-                    Source="{Binding ImageUrl}"
+                    Source="{Binding CoverImageUrl}"
                     WidthRequest="40" />
                 <Label
                     Grid.Column="1"

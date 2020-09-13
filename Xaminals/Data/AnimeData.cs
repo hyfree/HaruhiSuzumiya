@@ -7,15 +7,15 @@ using HaruhiSuzumiya.Common.Entity;
 namespace HaruhiSuzumiya.APP.Data
 {
     /// <summary>
-    /// 轮播图 数据
+    /// 动漫数据 数据
     /// </summary>
-    public class CarouselData
+    public class AnimeData
     {
-        public static IList<Anime> CarouselImages { get; private set; }
+        public static IList<Anime> AnimeImages { get; private set; }
 
-        static CarouselData()
+        static AnimeData()
         {
-            CarouselImages = new List<Anime>
+            AnimeImages = new List<Anime>
             {
                 new Anime() { Name = "overlord", CoverImageUrl = "overlord.jpg", Details = "" },
                 new Anime() { Name = "女神异闻录", CoverImageUrl = "nsywl.jpg", Details = "" },

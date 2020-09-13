@@ -7,11 +7,11 @@ namespace HaruhiSuzumiya.APP.Views
 {
     public partial class RecommendPage : ContentPage
     {
-        MainViewModel _vm;
+      
         public RecommendPage()
         {
             InitializeComponent();
-            //BindingContext = _vm = new MainViewModel();
+           
         }
 
         async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEventArgs e)

@@ -4,12 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using HaruhiSuzumiya.APP.Models;
+using HaruhiSuzumiya.Common.Entity;
 
 namespace HaruhiSuzumiya.APP.Controls
 {
     public class AnimalSearchHandler : SearchHandler
     {
-        public IList<Animal> Animals { get; set; }
+        public IList<Anime> Animes { get; set; }
         public Type SelectedItemNavigationTarget { get; set; }
 
         protected override void OnQueryChanged(string oldValue, string newValue)
@@ -22,9 +23,9 @@ namespace HaruhiSuzumiya.APP.Controls
             }
             else
             {
-                ItemsSource = Animals
-                    .Where(animal => animal.Name.ToLower().Contains(newValue.ToLower()))
-                    .ToList<Animal>();
+                ItemsSource = Animes
+                    .Where(anime => anime.Name.ToLower().Contains(newValue.ToLower()))
+                    .ToList<Anime>();
             }
         }
 
