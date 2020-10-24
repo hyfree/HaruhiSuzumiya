@@ -19,10 +19,6 @@
     <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\HaruhiSuzumiya.Common\HaruhiSuzumiya.Common.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Update="Views\AnimeDetailPage.xaml.cs">
       <DependentUpon>AnimeDetailPage.xaml</DependentUpon>
